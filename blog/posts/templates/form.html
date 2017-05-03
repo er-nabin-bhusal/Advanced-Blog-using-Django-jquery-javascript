@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+
+
+{% block head_title %}{{ block.super }} | Login{% endblock head_title %}
+
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<div class="col-sm-7">
+
+	<h1>{{ title }}</h1>
+	{% if not request.user.is_authenticated %}
+	<form method="POST" action="" enctype="multipart/form-data">{% csrf_token %}
+	{{ form | crispy }}
+	<button type="submit" class='btn btn-default'>Submit</button>
+	</form>
+	{% else %}
+	<h5> you are already logged in. </h5>
+	{% endif %}
+</div>
+
+{% endblock content %}

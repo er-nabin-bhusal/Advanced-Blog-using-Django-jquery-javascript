@@ -1,0 +1,18 @@
+h1
+{
+	color: grey;
+}
+
+.wmd-panel
+{
+	margin-right: 0px !important; /*this will overwrite the setting bro (!important)*/
+	margin-left: 0px !important;
+}
+#inline
+{
+	display: inline !important;
+}
+.comment-reply
+{
+	display: none;
+}
